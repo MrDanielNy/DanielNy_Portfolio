@@ -5,7 +5,7 @@ export const HeroWrapper = styled.div`
     background-color: ${theme.colors.backgroundGrey};
 
 .hero {
-  margin-top: -5rem;
+  margin-top: 5rem;
   padding-top: 5rem;
   min-height: 100vh;
   background: var(--dark-shadow);
@@ -66,7 +66,17 @@ export const HeroWrapper = styled.div`
     grid-column: 6/-1;
   }
 }
+
 @media screen and (min-width: 1170px) {
+
+  .hero {
+  margin-top: -5rem;
+  padding-top: 5rem;
+  min-height: 100vh;
+  background: var(--dark-shadow);
+  position: relative;
+}
+
   .hero h4 {
     font-size: 1rem;
   }

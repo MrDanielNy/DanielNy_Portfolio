@@ -35,7 +35,7 @@ const Hero = () => {
               <h1>Daniel Ny</h1>
               <div className="underline"></div>
               <h4>Indie developer going pro</h4>
-              - 🔭 I’m currently working on my own Portfolio site
+              {/*- 🔭 I’m currently working on my own Portfolio site
               <br />
               - 🌱 I’m currently learning React, Gatsby, GraphQL and Strapi among other things!
               <br />
@@ -47,10 +47,10 @@ const Hero = () => {
               <br />
               - ⚡ Being optimistic is never wrong, at worst you just had some happiness.
               <br />
-              - 📫 How to reach me: use the link below :)
+              - 📫 How to reach me: use the link below :) */}
               <br />
               <Link to="/contact" className="btn">
-                kontakta mig
+                Get in touch
               </Link>
               <SocialLinks />
             </div>
