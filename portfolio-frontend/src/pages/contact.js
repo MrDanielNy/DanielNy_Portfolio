@@ -1,8 +1,14 @@
 import React from "react"
 import Layout from "../components/Layout"
+import SEO from '../components/SEO'
 
 const contact = () => {
-  return <h2>contact page</h2>
+  return (
+  <Layout>
+    <SEO title="Contact" description="Contact page" />
+
+  </Layout>
+  )
 }
 
 export default contact

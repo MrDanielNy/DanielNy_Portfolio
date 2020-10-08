@@ -1,0 +1,8 @@
+{
+    "provider": "cloudinary",
+    "providerOptions": {
+        "cloud_name": "dns4vqfsa",
+        "api_key": "443347692347818",
+        "api_secret": "XuBraN8pQ1xbVBhmfpFGwQ3jBfg"
+    }
+}

@@ -6,17 +6,23 @@ import Services from "../components/Services"
 import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import Blogs from "../components/Blogs"
+import SEO from '../components/SEO'
 
 export default ( {data} ) => {
   const {
     allStrapiProjects: { nodes: projects },
+    allStrapiBlogs: { nodes: blogs },
   } = data
+  let output = JSON.stringify(blogs);
+  console.log(output);
   return (
     <Layout>
+      <SEO />
       <Hero />
       <Services />
       <Jobs />
-      <Projects projects={projects} title="projekt i fokus" showLink />
+      <Projects projects={projects} title="projekts in focus" showLink />
+      <Blogs blogs={blogs} title="Latest articles" showLink />
     </Layout>
   )
 }
@@ -41,6 +47,31 @@ export const query = graphql`
           id
           title
         }
+      }
+    }
+    allStrapiBlogs(sort: {fields: date, order: DESC}, limit: 3) {
+      nodes {
+        category
+        id
+        title
+        desc
+        content
+        date(formatString: "DD MM YYYY", locale: "SV")
+        image {
+          childImageSharp {
+            fluid {
+              base64
+              tracedSVG
+              srcWebp
+              srcSetWebp
+              originalImg
+              originalName
+              presentationWidth
+              presentationHeight
+            }
+          }
+        }
+        slug
       }
     }
   }
