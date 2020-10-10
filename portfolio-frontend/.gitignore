@@ -70,3 +70,5 @@ yarn-error.log
 
 #config-file for cloudinary
 .extensions/uploads/config/settings.json
+# Local Netlify folder
+.netlify
