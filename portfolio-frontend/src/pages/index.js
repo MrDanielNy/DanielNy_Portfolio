@@ -17,7 +17,7 @@ export default ( {data} ) => {
   console.log(output);
   return (
     <Layout>
-      <SEO title="Start" />
+      <SEO title="Home" />
       <Hero />
       <Services />
       <Jobs />
