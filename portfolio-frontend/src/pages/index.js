@@ -17,11 +17,11 @@ export default ( {data} ) => {
   console.log(output);
   return (
     <Layout>
-      <SEO />
+      <SEO title="Start" />
       <Hero />
       <Services />
       <Jobs />
-      <Projects projects={projects} title="projects in focus" showLink />
+      <Projects projects={projects} title="Projects in focus" showLink />
       <Blogs blogs={blogs} title="Latest articles" showLink />
     </Layout>
   )

@@ -11,9 +11,9 @@ const ProjectsPage = ({
 }) => {
   return (
     <Layout>
-      <SEO title="Project" description="Projects page" />
+      <SEO title="Projects" description="Projects page" />
       <section className="project-page">
-        <Projects projects={projects} title="Al projects" />
+        <Projects projects={projects} title="All projects" />
       </section>
     </Layout>
   )
