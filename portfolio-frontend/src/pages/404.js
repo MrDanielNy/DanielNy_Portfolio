@@ -10,7 +10,7 @@ const Error = () => {
       <main className="error-page">
         <div className="error-container">
           <h2>Something went wrong...</h2>
-          <p>...and you probably didn't want to see this. <br/> Please, use the home link below.</p>
+          <p>...and you probably didn't want to see this. <br/> Please, use the home button below.</p>
           <Link to="/" className="btn">
             Back home
           </Link>
