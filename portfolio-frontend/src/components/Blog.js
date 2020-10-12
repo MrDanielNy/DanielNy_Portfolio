@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
+import { BlogWrapper } from '../elements/BlogElements'
 
 const Blog = ({ id, title, image, date, category, slug, desc }) => {
   return (
@@ -13,7 +14,7 @@ const Blog = ({ id, title, image, date, category, slug, desc }) => {
         )}
         <div className="blog-card">
           {/* if title is not supplied, set a defualt title */}
-          <h4>{title || "Ariklar"}</h4>
+          <h4>{title || "Articles"}</h4>
           <p>{desc}</p>
           <div className="blog-footer">
             <p>{category}</p>

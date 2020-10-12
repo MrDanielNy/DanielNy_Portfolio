@@ -759,7 +759,7 @@ Projects
 Blog
 ===============
 */
-.blog {
+/*.blog {
   display: block;
   margin-bottom: 2rem;
   background: var(--clr-grey-10);
@@ -827,14 +827,14 @@ Blog
   .blog-img {
     height: 13.75rem;
   }
-}
+} */
 
 /*
 ===============
 Footer
 ===============
 */
-.footer {
+/* .footer {
   height: 9rem;
   background: #222;
   text-align: center;
@@ -858,7 +858,7 @@ Footer
 }
 .footer .social-link:hover {
   color: var(--clr-primary-5);
-}
+} */
 /*
 ===============
 Pages
