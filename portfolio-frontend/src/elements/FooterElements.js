@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const FooterWrapper = styled.div`
-.footer {
+footer {
   height: 9rem;
   background: #222;
   text-align: center;
@@ -9,20 +9,20 @@ export const FooterWrapper = styled.div`
   place-items: center;
 }
 
-.footer h4 {
+footer h4 {
   margin-top: 0.5rem;
   color: var(--clr-white);
   font-weight: normal;
   text-transform: uppercase;
 }
 
-.footer h4 span {
+footer h4 span {
   color: var(--clr-primary-5);
 }
 
-.footer-links {
+/*.footer-links {
   margin: 0 auto 1rem auto;
-}
+}*/
 
 .footer .social-link {
   color: var(--clr-white);
@@ -33,3 +33,7 @@ export const FooterWrapper = styled.div`
 }
 
 `;
+
+export const FooterLinks = styled.div`
+  margin: 0 auto 0.5rem auto;
+`; 

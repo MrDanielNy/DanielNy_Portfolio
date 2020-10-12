@@ -5,14 +5,13 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 import ReactMarkdown from "react-markdown"
 import SEO from "../components/SEO"
+
 import downloadFile from "../../static/Daniel_Ny_CV_2020.pdf"
-// ...GatsbyImageSharpFluid
 const About = ({
   data: {
     about: { nodes },
   },
 }) => {
-  //console.log(nodes)
   const { info, stack, title, image } = nodes[0]
   return (
     <Layout>

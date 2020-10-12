@@ -864,7 +864,7 @@ Footer
 Pages
 ===============
 */
-.blog-template,
+/*.blog-template,
 .projects-page,
 .blog-page,
 .error-page,
@@ -883,21 +883,21 @@ Pages
   text-transform: uppercase;
   color: var(--clr-primary-1);
   margin-bottom: 2rem;
-}
+} */
 /*
 ===============
 Blog Page
 ===============
 */
-.blog-page .blog {
+/* .blog-page .blog {
   background: var(--clr-white);
-}
+} */
 /*
 ===============
 About Page
 ===============
 */
-.about-page {
+/* .about-page {
   padding: 7rem 0;
 }
 .about-img {
@@ -947,13 +947,13 @@ About Page
   .about-text {
     grid-column: 6 / -1;
   }
-}
+} */
 /*
 ===============
 Contact Page
 ===============
 */
-.contact-page {
+/* .contact-page {
   display: grid;
   place-items: center;
   padding: 5rem 0;
@@ -1002,13 +1002,13 @@ Contact Page
   border-bottom-right-radius: var(--radius);
   border-top-right-radius: 0;
   border-top-left-radius: 0;
-}
+} */
 /*
 ===============
 Blog Template
 ===============
 */
-.blog-template {
+/*.blog-template {
   padding: 5rem 0;
 }
 
@@ -1047,4 +1047,4 @@ Blog Template
   width: 15rem;
   height: 15rem;
   margin: 3rem 0;
-}
+} */

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import theme from '../themes/theme'
 
 export const BlogWrapper = styled.div`
 .blog {
@@ -10,7 +9,7 @@ export const BlogWrapper = styled.div`
   box-shadow: var(--light-shadow);
   transition: var(--transition);
 }
-.blog:hover {
+&:hover {
   box-shadow: var(--dark-shadow);
   transform: scale(1.02);
 }

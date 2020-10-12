@@ -3,6 +3,7 @@ import React from "react"
 import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
 import Footer from "./Footer"
+import { LayoutWrapper } from '../elements/LayoutElements'
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -12,12 +13,12 @@ const Layout = ({ children }) => {
   }
 
   return (
-    <>
+    <LayoutWrapper>
       <Navbar toggleSidebar={toggleSidebar}/>
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
       {children}
       <Footer/>
-    </>
+    </LayoutWrapper>
   )
 }
 
