@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 import theme from '../themes/theme'
 
+export const HeroInfoWrapper = styled.div`
+  background-color: var(--clr-grey-1);
+  display: flex;
+  grid-area: heroinfo;
+`;
+/*
 export const HeroWrapper = styled.div`
-  background-color: ${theme.colors.backgroundGrey};
-  
-.hero {
-  margin-top: 5rem;
-  padding-top: 5rem;
+  background-color: var(--clr-grey-1);
   min-height: 100vh;
   background: var(--dark-shadow);
-  position: relative;
-}
 
 .hero-center {
   height: 100%;
@@ -90,4 +90,4 @@ export const HeroWrapper = styled.div`
   }
 }
 
-`;
+`; */

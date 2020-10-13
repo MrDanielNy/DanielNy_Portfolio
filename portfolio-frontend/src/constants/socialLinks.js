@@ -1,4 +1,5 @@
 import React from "react"
+import { SocialLink } from '../elements/FooterElements'
 import {
   FaFacebookSquare,
   FaLinkedin,
@@ -10,7 +11,7 @@ import {
 const data = [
   {
     id: 1,
-    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
+    icon: <FaFacebookSquare></FaFacebookSquare>,
     url: "https://www.facebook.com",
   },
   {
@@ -37,7 +38,7 @@ const data = [
 const links = data.map(link => {
   return (
     <li key={link.id}>
-      <a href={link.url} className="social-link">
+      <a href={link.url}>
         {link.icon}
       </a>
     </li>
@@ -46,6 +47,9 @@ const links = data.map(link => {
 
 export default ({ styleClass }) => {
   return (
-    <ul className={`social-links ${styleClass ? styleClass : ""}`}>{links}</ul>
+    <SocialLink>
+      <ul>{links}</ul>
+    </SocialLink>
+    
   )
 }

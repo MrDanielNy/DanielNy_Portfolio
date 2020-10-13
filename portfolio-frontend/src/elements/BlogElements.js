@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const BlogWrapper = styled.div`
-.blog {
+display: flex;
+/*.blog {
   display: block;
   margin-bottom: 2rem;
   background: var(--clr-grey-10);
@@ -38,13 +39,13 @@ export const BlogWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.blog-footer p {
+} */
+p {
   margin-bottom: 0;
   font-weight: bold;
   color: var(--clr-grey-5);
 }
-.blog-footer p:first-of-type {
+p:first-of-type {
   display: inline-block;
   background: var(--clr-grey-9);
   color: var(--clr-grey-5);

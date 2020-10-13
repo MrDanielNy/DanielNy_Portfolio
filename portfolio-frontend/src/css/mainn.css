@@ -194,7 +194,7 @@ p {
 }
 /* page links */
 
-/* social links */
+/* social links 
 .social-links {
   margin-top: 2rem;
   width: 15rem;
@@ -208,7 +208,7 @@ p {
 }
 .social-link:hover {
   color: var(--clr-primary-5);
-}
+} */
 /*
 =============== 
 Navbar
