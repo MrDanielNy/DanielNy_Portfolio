@@ -9,7 +9,7 @@ export const BlogWrapper = styled.div`
   box-shadow: var(--light-shadow);
   transition: var(--transition);
 }
-&:hover {
+.blog:hover {
   box-shadow: var(--dark-shadow);
   transform: scale(1.02);
 }

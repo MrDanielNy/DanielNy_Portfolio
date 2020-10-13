@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import theme from '../themes/theme'
 
 export const HeroWrapper = styled.div`
-    background-color: ${theme.colors.backgroundGrey};
-
+  background-color: ${theme.colors.backgroundGrey};
+  
 .hero {
   margin-top: 5rem;
   padding-top: 5rem;
