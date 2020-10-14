@@ -16,7 +16,7 @@ export const LayoutWrapper = styled.div`
     display: grid;
     width: 100vw;
     height: 100%;    
-    grid-template-areas: " nav "
+    grid-template-areas: "nav nav"
                         "heroinfo heroimage"
                         "footer footer";
     grid-template-columns: auto 1fr;

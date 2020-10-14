@@ -2,19 +2,36 @@ import styled from 'styled-components'
 import theme from '../themes/theme'
 
 export const HeroWrapper = styled.div`
-  display: grid;
-
+  display: flex;
+  width: 100%;
+  background-color: green;
+  
 `;
 
-export const HeroInfoWrapper = styled.div`
+export const HeroCenter = styled.div`
+  height: 100%;
+  width: 90vw;
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 992px) {
+    width: 95vw;
+  }
+`;
+
+export const HeroInfo = styled.div`
   background-color: var(--clr-grey-1);
   display: grid;
+  min-height: 100%;
+  width: 49%;
   grid-area: heroinfo;
 `;
 
-export const HeroImageWrapper = styled.div`
+export const HeroImage = styled.div`
   background-color: var(--clr-grey-2);
   display: grid;
+  min-height: 100vh;
+  width: 49%;
   grid-area: heroimage;
 `;
 /*
