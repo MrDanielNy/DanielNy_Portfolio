@@ -12,10 +12,6 @@ ToggleBtn,
 const Navbar = ({toggleSidebar}) => {
   return (
     <Nav>
-      {/*<nav className="navbar">
-      <div className="nav-center">
-  <div className="nav-header"> */}
-      
       <NavCenter>
       <img src={logo} alt="logo" />
           <NavHeader>   
@@ -25,13 +21,9 @@ const Navbar = ({toggleSidebar}) => {
               <FaAlignRight></FaAlignRight>
               </button>
             </ToggleBtn>
-           
           </NavHeader>
       </NavCenter>
-          
     </Nav>
-      
   )
 }
-
 export default Navbar
