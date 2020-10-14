@@ -1,10 +1,21 @@
 import styled from 'styled-components'
 import theme from '../themes/theme'
 
+export const HeroWrapper = styled.div`
+  display: grid;
+
+`;
+
 export const HeroInfoWrapper = styled.div`
   background-color: var(--clr-grey-1);
-  display: flex;
+  display: grid;
   grid-area: heroinfo;
+`;
+
+export const HeroImageWrapper = styled.div`
+  background-color: var(--clr-grey-2);
+  display: grid;
+  grid-area: heroimage;
 `;
 /*
 export const HeroWrapper = styled.div`

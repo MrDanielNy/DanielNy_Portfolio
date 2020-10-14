@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
   return (
     <LayoutWrapper>
       <Navbar toggleSidebar={toggleSidebar}/>
-      <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+      {/*<Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />*/}
       <Hero/>
       {/*{children}*/}
       <Footer/>

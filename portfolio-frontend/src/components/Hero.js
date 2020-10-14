@@ -3,7 +3,7 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
-import { HeroWrapper } from '../elements/HeroElements'
+import { HeroInfoWrapper, HeroImageWrapper, HeroWrapper } from '../elements/HeroElements'
 
 const query = graphql`
     {
@@ -25,25 +25,25 @@ const Hero = () => {
   } = useStaticQuery(query)
   
   return (
-    <>
-      <header>
-        <div>
-          <article className="hero-info">
-            <div>
+    <HeroWrapper>
+      {/* Removed <header> and <article>*/}
+            <HeroInfoWrapper>
               <h1>Daniel Ny</h1>
-              <div className="underline"></div>
+              {/*<div className="underline"></div>*/}
               <h4>Indie developer going pro</h4>
               <br />
               <Link to="/contact" className="btn">
                 Get in touch
               </Link>
               <SocialLinks />
-            </div>
-          </article>
-          <Image fluid={fluid} className="hero-img" />
-         </div>
-      </header>
-    </>
+            </HeroInfoWrapper>
+          {/*removed </article>*/}
+          <HeroImageWrapper>
+            <Image fluid={fluid} />
+          </HeroImageWrapper>
+          
+      {/*removed </header>*/}
+    </HeroWrapper>
   )
 }
 export default Hero

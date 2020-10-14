@@ -7,6 +7,7 @@ import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import Blogs from "../components/Blogs"
 import SEO from '../components/SEO'
+import GlobalStyles from '../elements/Global'
 
 export default ( {data} ) => {
   const {
@@ -17,6 +18,7 @@ export default ( {data} ) => {
   console.log(output);
   return (
     <Layout>
+      <GlobalStyles />
       <SEO title="Home" />
       <Hero />
       <Services />
