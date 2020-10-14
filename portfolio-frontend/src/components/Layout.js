@@ -22,11 +22,7 @@ const Layout = ({ children }) => {
       <GlobalStyles/>
       <Navbar toggleSidebar={toggleSidebar}/>
       {/*<Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />*/}
-      <Jobs />
-      <Hero/>
-      <Services />
-      <Projects />
-      {/*{children}*/}
+      {children}
       <Footer/>
     </LayoutWrapper>
   )

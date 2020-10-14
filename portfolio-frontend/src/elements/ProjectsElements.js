@@ -2,28 +2,60 @@ import styled from 'styled-components'
 import theme from '../themes/theme'
 
 export const ProjectsWrapper = styled.div`
-grid-area: projects;
+display: grid;
+width: 90vw;
+grid-area: projectsection;
 background: ${theme.colors.backgroundBlack}; /*var(--clr-grey-10); */
+
 
 h2 {
   text-align: center;
   padding: 1rem;
 }
+`;
 
-.projects {
-  background: var(--clr-grey-10);
-}
-.project {
+export const ProjectItem = styled.div`
   display: grid;
   margin-bottom: 4rem;
+`; 
   
+export const ProjectImage = styled.div`
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  height: 19rem;
+  z-index: 1;
+
+  &:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, var(--clr-primary-5), #222);
+  opacity: 0.85;
+  transition: var(--transition);
+  }
+`;
+/*
+h2 { OK
+  text-align: center;
+  padding: 1rem;
+}
+
+.projects { OK
+  background: var(--clr-grey-10);
+}
+.project { OK
+  display: grid;
+  margin-bottom: 4rem;
 }
 .project-img {
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
   height: 19rem;
   z-index: 1;
-}
+}*/
 /*.project-img::after {
   content: "";
   position: absolute;
@@ -34,7 +66,7 @@ h2 {
   background: linear-gradient(to bottom right, var(--clr-primary-5), #222);
   opacity: 0.85;
   transition: var(--transition);
-}*/
+}*//*
 .project:hover .project-img::after {
   opacity: 0;
 }
@@ -113,7 +145,7 @@ h2 {
   }
   .project-img {
     grid-column: 1 / span 8;
-    /* grid-column-end: 8; */
+    /* grid-column-end: 8; * /
     grid-row: 1 / 1;
     height: 30rem;
     border-radius: var(--radius);
@@ -137,4 +169,4 @@ h2 {
     text-align: left;
   }
 }
-`;
+`; */

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ServicesWrapper = styled.div`
 grid-area: services;
-
+align-items: center;
 h2 {
     color: black;
     text-align: center;
@@ -14,14 +14,15 @@ h4 {
 `;
 
 export const Service = styled.div`
-  background: var(--clr-white);
+  background: var(--clr-grey-8);
   padding: 3rem 1.5rem;
   margin-bottom: 2rem;
+  
   border-radius: var(--radius);
   text-align: center;
   -webkit-transition: var(--transition);
   transition: var(--transition);
-
+  max-width: 75%;
   p {
   -webkit-transition: var(--transition);
   transition: var(--transition);
@@ -43,7 +44,7 @@ export const ServiceIcon = styled.div`
 
 export const ServiceCenter = styled.div`
   @media screen and (min-width: 676px) {
-
+    width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   -webkit-column-gap: 2rem;

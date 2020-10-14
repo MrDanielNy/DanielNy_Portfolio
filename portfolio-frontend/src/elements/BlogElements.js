@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const BlogWrapper = styled.div`
 display: flex;
+grid-area: blogsection;
+
 /*.blog {
   display: block;
   margin-bottom: 2rem;

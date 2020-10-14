@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const JobsWrapper = styled.div`
+display: grid;
 grid-area: jobsection;
 width: 100%;
 display: flex;

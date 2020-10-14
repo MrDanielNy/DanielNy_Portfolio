@@ -21,7 +21,8 @@ export const LayoutWrapper = styled.div`
                         "herowrapper herowrapper"
                         "services services"
                         "jobsection jobsection"
-                        "projects projects"
+                        "projectsection projectsection"
+                        "blogsection blogsection"
                         "footer footer";
     grid-template-columns: auto auto;
 }
