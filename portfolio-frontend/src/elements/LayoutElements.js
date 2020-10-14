@@ -18,6 +18,8 @@ export const LayoutWrapper = styled.div`
     height: 100%;    
     grid-template-areas: "nav nav"
                         "heroinfo heroimage"
+                        "services services"
+                        "jobs jobs"
                         "footer footer";
     grid-template-columns: auto 1fr;
 }

@@ -5,6 +5,8 @@ import Sidebar from "./Sidebar"
 import Footer from "./Footer"
 import { LayoutWrapper } from '../elements/LayoutElements'
 import Hero from './Hero'
+import Services from './Services'
+import Jobs from './Jobs'
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -17,6 +19,8 @@ const Layout = ({ children }) => {
       <Navbar toggleSidebar={toggleSidebar}/>
       {/*<Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />*/}
       <Hero/>
+      <Services />
+      <Jobs />
       {/*{children}*/}
       <Footer/>
     </LayoutWrapper>

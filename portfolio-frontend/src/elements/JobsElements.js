@@ -1,11 +1,21 @@
 import styled from 'styled-components'
 
 export const JobsWrapper = styled.div`
+display: grid;
+grid-area: jobs;
+
 h2 {
     color: black;
     text-align: center;
 }
-.jobs-center {
+`;
+
+export const JobsCenter = styled.div`
+  width: 80vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+`;
+/*.jobs-center {
   width: 80vw;
   margin: 0 auto;
   max-width: var(--max-width);
@@ -88,4 +98,4 @@ h2 {
     box-shadow: -2px 0 var(--clr-primary-5);
   }
 }
-`;
+`; */
