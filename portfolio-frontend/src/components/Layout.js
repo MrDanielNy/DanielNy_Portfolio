@@ -7,6 +7,9 @@ import { LayoutWrapper } from '../elements/LayoutElements'
 import Hero from './Hero'
 import Services from './Services'
 import Jobs from './Jobs'
+import Projects from './Projects'
+
+import GlobalStyles from '../elements/Global'
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -16,11 +19,13 @@ const Layout = ({ children }) => {
 
   return (
     <LayoutWrapper>
+      <GlobalStyles/>
       <Navbar toggleSidebar={toggleSidebar}/>
       {/*<Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />*/}
+      <Jobs />
       <Hero/>
       <Services />
-      <Jobs />
+      <Projects />
       {/*{children}*/}
       <Footer/>
     </LayoutWrapper>

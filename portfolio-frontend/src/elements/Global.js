@@ -16,6 +16,7 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
   margin-top: 5rem;
+  max-width: 100vw;
 }
 html {
   background: var(--dark-shadow);

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import theme from '../themes/theme'
 
 export const ProjectsWrapper = styled.div`
-
+grid-area: projects;
 background: ${theme.colors.backgroundBlack}; /*var(--clr-grey-10); */
 
 h2 {

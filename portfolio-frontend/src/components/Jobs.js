@@ -3,7 +3,7 @@ import Title from "./Title"
 import { FaAngleDoubleRight } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
-import { JobsWrapper } from '../elements/JobsElements'
+import { JobsWrapper, JobsCenter, BtnContainer, JobBtn, JobInfo, JobDate } from '../elements/JobsElements'
 
 const query = graphql`
   {
@@ -35,29 +35,32 @@ const Jobs = () => {
   console.log(company, position, date, desc)
 
   return (
-    <section className="section jobs">
+    <section>
       <JobsWrapper>
       <Title title="Experiences" />
-      <div className="jobs-center">
+      <JobsCenter>
         {/* btn container */}
-        <div className="btn-container">
+        <BtnContainer>
           {jobs.map((item, index) => {
             return (
-              <button
+              <JobBtn
                 key={item.strapiId}
                 onClick={() => setValue(index)}
-                className={`job-btn ${index === value && "active-btn"}`}
+            /*className={`job-btn ${index === value && "active-btn"}`}*/
               >
                 {item.company}
-              </button>
+              </JobBtn>
             )
           })}
-        </div>
+        </BtnContainer>
         {/* job info */}
-        <article className="job-info">
+        <article>
+          <JobInfo>
           <h3>{position}</h3>
           <h4>{company}</h4>
-          <p className="job-date">{date}</p>
+          <JobDate>
+            <p>{date}</p>
+          </JobDate>
           {desc.map(item => {
             return (
               <div key={item.id} className="job-desc">
@@ -66,8 +69,9 @@ const Jobs = () => {
               </div>
             )
           })}
+          </JobInfo>
         </article>
-      </div>
+      </JobsCenter>
       <Link to="/about" className="btn center-btn">
         Mitt CV
       </Link>
