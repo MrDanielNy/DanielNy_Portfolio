@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
 import { HeroInfo, HeroImage, HeroWrapper, HeroCenter } from '../elements/HeroElements'
+import { Button } from './Button'
 
 const query = graphql`
     {
@@ -33,9 +34,10 @@ const Hero = () => {
               {/*<div className="underline"></div>*/}
               <h4>Indie developer going pro</h4>
               <br />
-              <Link to="/contact" className="btn">
+              {/*<Link to="/contact" className="btn">
                 Get in touch
-              </Link>
+              </Link> */}
+              <Button href="/contact">Get in touch</Button>
               <SocialLinks />
             </HeroInfo>
           {/*removed </article>*/}

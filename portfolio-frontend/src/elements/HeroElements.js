@@ -4,7 +4,6 @@ import theme from '../themes/theme'
 export const HeroWrapper = styled.div`
   display: flex;
   width: 100%;
-  background-color: green;
   
 `;
 
@@ -20,19 +19,43 @@ export const HeroCenter = styled.div`
 `;
 
 export const HeroInfo = styled.div`
-  background-color: var(--clr-grey-1);
-  display: grid;
+  //background-color: var(--clr-grey-1);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+
+  @media screen and (min-width: 992px) {
+    width: 95vw;
+  
+  flex-direction: column;
   min-height: 100%;
   width: 49%;
-  grid-area: heroinfo;
+  grid-area: heroimage;
+  text-align: center;
+
+  h1 {
+    margin-top: 4rem;
+    font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+}
 `;
 
 export const HeroImage = styled.div`
   background-color: var(--clr-grey-2);
+  display: none;
+
+  @media screen and (min-width: 992px) {
   display: grid;
   min-height: 100vh;
   width: 49%;
-  grid-area: heroimage;
+  grid-area: heroinfo;
+  }
 `;
 /*
 export const HeroWrapper = styled.div`
