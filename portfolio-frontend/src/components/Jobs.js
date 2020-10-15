@@ -4,6 +4,7 @@ import { FaAngleDoubleRight } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
 import { JobsWrapper, JobsCenter, BtnContainer, JobBtn, JobInfo, JobDate } from '../elements/JobsElements'
+import { Button } from './Button'
 
 const query = graphql`
   {
@@ -72,9 +73,9 @@ const Jobs = () => {
           </JobInfo>
         </article>
       </JobsCenter>
-      <Link to="/about" className="btn center-btn">
-        Mitt CV
-      </Link>
+      <Button href="/about">
+        My CV
+      </Button>
       </JobsWrapper>
       
     </section>

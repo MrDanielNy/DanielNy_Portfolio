@@ -3,6 +3,7 @@ import Title from "./Title"
 import Blog from "./Blog"
 import { Link } from "gatsby"
 import { BlogWrapper } from '../elements/BlogElements'
+import { Button } from './Button'
 
 export const Blogs = ({ blogs, title, showLink }) => {
   return (
@@ -16,9 +17,9 @@ export const Blogs = ({ blogs, title, showLink }) => {
         </div>
         {/* If the showLink is undefined, dont show any link, otherwise show link */}
         {showLink && (
-          <Link to="/blog" className="btn center-btn">
-            Alla artiklar
-          </Link>
+          <Button href="/blog">
+            All articles
+          </Button>
         )}
       </section>
     </BlogWrapper>
