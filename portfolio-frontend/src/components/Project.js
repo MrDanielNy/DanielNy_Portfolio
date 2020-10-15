@@ -2,40 +2,58 @@ import React from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
-import { ProjectItem, ProjectImage } from '../elements/ProjectsElements'
+import { ProjectItem, 
+  ProjectImage, 
+  ProjectInfo, 
+  ProjectNumber, 
+  ProjectImageCover,
+  ProjectDesc,
+  ProjectStack,
+  ProjectIcon,
+  AboutStack } from '../elements/ProjectsElements'
 
 const Project = ({ description, title, github, stack, url, image, index }) => {
   return (
-    <ProjectImage>
+    <ProjectItem>
     <article>
       {/* if image is not supplied, instead of breaking, dont show any image */}
       {image && (
         <ProjectImage>
+          <ProjectImageCover>
             <Image fluid={image.childImageSharp.fluid}/>
+          </ProjectImageCover>
         </ProjectImage>
         
       )}
-      <div className="project-info">
-        <span className="project-number">0{index + 1}.</span>
+      <AboutStack>
+      <ProjectInfo>
+        <ProjectNumber>0{index + 1}.</ProjectNumber>
         {/* if title is not supplied, set a defualt title */}
         <h3>{title || "Projekt"}</h3>
-        <p className="project-description">{description}</p>
-        <div className="project-stack">
+        <ProjectDesc>{description}</ProjectDesc>
+        <ProjectStack>
           {stack.map(item => {
             return <span key={item.id}>{item.title}</span>
           })}
-        </div>
+        </ProjectStack>
         <div className="project-links">
           <a href={github}>
-            <FaGithubSquare className="project-icon" />
+            <ProjectIcon>
+              <FaGithubSquare />
+            </ProjectIcon>
+            
           </a>
           <a href={url}>
-            <FaShareSquare className="project-icon" />
+            <ProjectIcon>
+              <FaShareSquare />
+            </ProjectIcon>
+            
           </a>
         </div>
-      </div>
+      </ProjectInfo>
+      </AboutStack>
     </article>
-    </ProjectImage>
+    </ProjectItem>
   )
 }
 
