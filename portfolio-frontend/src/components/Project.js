@@ -9,34 +9,27 @@ import { ProjectItem,
   ProjectImageCover,
   ProjectDesc,
   ProjectStack,
-  ProjectIcon,
-  AboutStack } from '../elements/ProjectsElements'
+  ProjectIcon
+  } from '../elements/ProjectsElements'
 
 const Project = ({ description, title, github, stack, url, image, index }) => {
   return (
     <ProjectItem>
-    <article>
       {/* if image is not supplied, instead of breaking, dont show any image */}
       {image && (
-        <ProjectImage>
-          <ProjectImageCover>
-            <Image fluid={image.childImageSharp.fluid}/>
-          </ProjectImageCover>
-        </ProjectImage>
-        
+        <ProjectImage fluid={image.childImageSharp.fluid}/>
       )}
-      <AboutStack>
       <ProjectInfo>
         <ProjectNumber>0{index + 1}.</ProjectNumber>
         {/* if title is not supplied, set a defualt title */}
         <h3>{title || "Projekt"}</h3>
-        <ProjectDesc>{description}</ProjectDesc>
+        <p>{description}</p>
         <ProjectStack>
           {stack.map(item => {
             return <span key={item.id}>{item.title}</span>
           })}
         </ProjectStack>
-        <div className="project-links">
+        <div>
           <a href={github}>
             <ProjectIcon>
               <FaGithubSquare />
@@ -51,8 +44,6 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
           </a>
         </div>
       </ProjectInfo>
-      </AboutStack>
-    </article>
     </ProjectItem>
   )
 }

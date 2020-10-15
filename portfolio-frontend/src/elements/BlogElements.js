@@ -4,7 +4,70 @@ export const BlogWrapper = styled.div`
 display: flex;
 grid-area: blogsection;
 
-/*.blog {
+p {
+  margin-bottom: 0;
+  font-weight: bold;
+  color: var(--clr-grey-5);
+}
+
+p:first-of-type {
+  display: inline-block;
+  background: var(--clr-grey-9);
+  color: var(--clr-grey-5);
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+`;
+
+/*@media screen and (min-width: 576px) {
+  .blogs-center {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
+    column-gap: 2rem;
+  }
+  .blog-img {
+    height: 17.5rem;
+  }
+}
+@media screen and (min-width: 850px) {
+  .blog-img {
+    height: 13.75rem;
+  }
+}*/
+
+export const BlogCenter = styled.div`
+/*  @media screen and (min-width: 576px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
+    column-gap: 2rem;
+  } */
+`;
+
+export const BlogImg = styled.div`
+//  @media screen and (min-width: 850px) {
+//    height: 13.75rem;
+//  }
+`;
+
+export const BlogItem = styled.div`
+/*  display: block;
+  margin-bottom: 2rem;
+  background: var(--clr-grey-10);
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  transition: var(--transition); */
+
+  &:hover {
+  box-shadow: var(--dark-shadow);
+  transform: scale(1.02);
+  }
+`;
+
+/*.blog { OK
   display: block;
   margin-bottom: 2rem;
   background: var(--clr-grey-10);
@@ -12,7 +75,7 @@ grid-area: blogsection;
   box-shadow: var(--light-shadow);
   transition: var(--transition);
 }
-.blog:hover {
+.blog:hover { OK
   box-shadow: var(--dark-shadow);
   transform: scale(1.02);
 }
@@ -42,35 +105,3 @@ grid-area: blogsection;
   justify-content: space-between;
   align-items: center;
 } */
-p {
-  margin-bottom: 0;
-  font-weight: bold;
-  color: var(--clr-grey-5);
-}
-p:first-of-type {
-  display: inline-block;
-  background: var(--clr-grey-9);
-  color: var(--clr-grey-5);
-  margin-right: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: var(--radius);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.85rem;
-}
-@media screen and (min-width: 576px) {
-  .blogs-center {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
-    column-gap: 2rem;
-  }
-  .blog-img {
-    height: 17.5rem;
-  }
-}
-@media screen and (min-width: 850px) {
-  .blog-img {
-    height: 13.75rem;
-  }
-}
-`;

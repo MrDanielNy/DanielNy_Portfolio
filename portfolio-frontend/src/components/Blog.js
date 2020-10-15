@@ -2,10 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
+import { BlogItem, BlogCenter, BlogImg } from '../elements/BlogElements'
 
 const Blog = ({ id, title, image, date, category, slug, desc }) => {
   return (
     <Link to={`/blogs/${slug}`} key={id}>
+      <BlogItem>
       <article className="blog">
         {/* if image is not supplied, instead of breaking, dont show any image */}
         {image && (
@@ -21,6 +23,7 @@ const Blog = ({ id, title, image, date, category, slug, desc }) => {
           </div>
         </div>
       </article>
+      </BlogItem>
     </Link>
   )
 }
