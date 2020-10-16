@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { NavLinks, NavItems } from '../elements/NavElements'
+import { NavLinks, SidebarLinks } from '../elements/NavElements'
 
 const data = [
   {
@@ -39,13 +39,11 @@ const tempLinks = data.map(link => {
 })
 // I KNOW WE CAN COMBINE IT !!!!!
 
-export default ({}) => {
+export default ({ usingSidebar }) => {
   return (
-    <NavLinks>
-      <NavItems>
-        {tempLinks}
-      </NavItems>
-    </NavLinks>
+    <>
+      {usingSidebar ? <SidebarLinks>{tempLinks}</SidebarLinks> : <NavLinks>{tempLinks}</NavLinks>}
+    </>
     
   )
 }

@@ -13,18 +13,28 @@ export const HeroCenter = styled.div`
   display: flex;
   align-items: center;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 768px) {
     width: 95vw;
   }
 `;
 
 export const HeroInfo = styled.div`
-  //background-color: var(--clr-grey-1);
   display: flex;
   flex-direction: column;
   width: 100%;
   text-align: center;
   align-items: center;
+
+  h1 {
+    margin-top: 4rem;
+    font-size: 3rem;
+    color: black;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    color: black;
+  }
   
   @media screen and (min-width: 992px) {
     width: 95vw;
@@ -32,7 +42,7 @@ export const HeroInfo = styled.div`
   flex-direction: column;
   min-height: 100%;
   width: 49%;
-  grid-area: heroimage;
+  //grid-area: heroimage;
   text-align: center;
 
   h1 {
@@ -56,6 +66,6 @@ export const HeroImage = styled.div`
   display: grid;
   min-height: 100vh;
   width: 49%;
-  grid-area: heroinfo;
+  //grid-area: heroinfo;
   }
 `;

@@ -1,17 +1,19 @@
-import styled from 'styled-components'
+import styled, { keyframes, css } from 'styled-components'
 
 export const Nav = styled.nav`
-    width: 100%;
-    height: 5rem;
-    display: grid;
-    align-items: center;
-    z-index: 200;
-    background: var(--clr-white);
-    grid-area: nav;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  display: grid;
+  align-items: center;
+  z-index: 200;
+  background: var(--clr-white);
+  grid-area: nav;
 
-    @media screen and (min-width: 992px) {
-        
-    }
+  @media screen and (min-width: 992px) {
+    background: transparent;
+  }
 `;
 
 /*Not in use*/
@@ -20,13 +22,13 @@ export const NavCenter = styled.div`
   max-width: 1170px;
   margin: 0 auto;
 
-#logo{
-  width: 7%;
-  height: 7%;
+#logo{ 
+  height: 50px;
+  width: auto;
 }
 
   @media screen and (min-width: 768px) {
-    display: flex;
+    display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
     
@@ -36,16 +38,13 @@ export const NavCenter = styled.div`
 export const NavHeader = styled.div`
     display: flex;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-
-    img {
-        margin-bottom: 0.375rem;
-    }
 `;
 
-export const NavLinks = styled.div`
+export const NavLinks = styled.ul`
     display: none;
+
 
     @media screen and (min-width: 768px) {
         display: flex;
@@ -75,15 +74,106 @@ export const NavLinks = styled.div`
     }   
 `;
 
-export const NavItems = styled.ul`   
-    display: flex;
-    list-style: none;
-    align-items: flex-end;
-    flex-direction: row;
+/* Sidebar */
+export const SidebarWrapper = styled.aside`
+  background: var(--clr-grey-10);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  opacity:  ${({ isOpen }) => isOpen ? "1" : "0"};
+  transition: var(--transition);
+  transform: ${({ isOpen }) => isOpen ? "translateX(0)" : "translateX(-100%)"};
+
+  button {
+    position: absolute;
+    right: 4.75%;
+    top: 2.75%;
+    font-size: 2.5rem;
+    background: transparent;
+    border-color: transparent;
+    color: var(--clr-red-dark);
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 992px) {
+    transform: translateX(-100%);
+  }
 `;
 
+export const SidebarLinks = styled.ul` 
+    li {
+        opacity: 0;
+    }
+
+    li a {
+      display: block;
+      text-align: center;
+      text-transform: capitalize;
+      color: var(--clr-grey-5);
+      //letter-spacing: ${props => props.theme.spacing};
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      transition: var(--transition);
+      border-radius: var(--radius);
+    }
+
+    /*li a:hover{
+      background: ${props => props.theme.color.primary9};
+      color: ${props => props.theme.color.primary5};
+    }*/
+    
+    li {
+      ${SlideRight};
+    }
+    
+    //animated list items
+    li:nth-of-type(1) {
+        animation-delay: 0.25s;
+    }
+    li:nth-of-type(2) {
+        animation-delay: 0.5s;
+    }
+    li:nth-of-type(3) {
+        animation-delay: 0.75s;
+    }
+    li:nth-of-type(4) {
+        animation-delay: 1s;
+    }
+    li:nth-of-type(5) {
+        animation-delay: 1.25s;
+    }
+`;
+
+/*.show-sidebar {
+  opacity: 1;
+  transform: translateX(0);
+}
+.sidebar-links li {
+  opacity: 0;
+}
+.sidebar-links li a {
+  display: block;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--clr-grey-5);
+  letter-spacing: var(--spacing);
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  transition: var(--transition);
+  border-radius: var(--radius);
+}
+.sidebar-links li a:hover {
+  background: var(--clr-primary-9);
+  color: var(--clr-primary-5);
+} */
+
 export const ToggleBtn = styled.button`
-    font-size: 1rem;
+    font-size: 1.5rem;
     background: transparent;
     border-color: transparent;
     color: var(--clr-primary-5);
@@ -93,7 +183,32 @@ export const ToggleBtn = styled.button`
     &:hover {
         color: var(--clr-primary-2);
     }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
 `;
+
+/* Animations */
+
+//Sets transform outside of window and opacity to 0. Then transform to zero and opacity to one
+const fadeIn = keyframes`
+    0% {
+            transform: translateX(-200px);
+            opacity: 0;
+        }
+    100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+`
+
+//Slide elements to the right and fade in as shown above
+//(I got this solution from Mikael Sundqvist).
+const SlideRight = css`
+    animation: ${fadeIn} 0.5s ease-in-out 0.3s forwards; 
+`
+
 /*
 .navbar { OK
   position: absolute;

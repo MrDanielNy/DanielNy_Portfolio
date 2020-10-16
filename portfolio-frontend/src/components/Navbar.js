@@ -4,7 +4,7 @@ import { FaAlignRight } from "react-icons/fa"
 import PageLinks from "../constants/links"
 import { Nav, 
 NavCenter,
-NavHeader,
+NavHeader, 
 NavLinks,
 ToggleBtn,
 } from '../elements/NavElements'
@@ -13,15 +13,13 @@ const Navbar = ({toggleSidebar}) => {
   return (
     <Nav>
       <NavCenter>
-      <img src={logo} alt="logo" id="logo"/>
-          <NavHeader>   
-            <PageLinks />
-            <ToggleBtn>
-              <button type="button" className="toggle-btn" onClick={toggleSidebar}>
-              <FaAlignRight></FaAlignRight>
-              </button>
-            </ToggleBtn>
-          </NavHeader>
+        <NavHeader>   
+          <img src={logo} alt="logo" id="logo"/>
+          <ToggleBtn onClick={toggleSidebar}>
+            <FaAlignRight />
+          </ToggleBtn>  
+        </NavHeader>
+        <PageLinks />
       </NavCenter>
     </Nav>
   )
