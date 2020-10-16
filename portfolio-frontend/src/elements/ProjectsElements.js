@@ -20,8 +20,6 @@ export const ProjectsWrapper = styled.section` //OK
   @media screen and (min-width: 992px) {
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
-
-      
 }
 `;
 
@@ -38,8 +36,9 @@ export const ProjectsCenter = styled.div`
 export const ProjectItem = styled.article`
   display: grid;
   margin-bottom: 4rem;
-
+  
   @media screen and (min-width: 992px) {
+    display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
     &:nth-of-type(even) div {
@@ -52,8 +51,18 @@ export const ProjectItem = styled.article`
         grid-row: 1 / 1;
         text-align: left;
       }
+
+      &:nth-of-type(odd) div {
+        grid-column: 1 / 8;
+        grid-row: 1 / 1;
+      }
+        //Position even projectInfos
+      &:nth-of-type(odd) section {
+        grid-column: 5 / span 7;
+        grid-row: 1 / 1;
+        text-align: left;
+      }
   }
-  //Position the even images
   
 `; 
   
@@ -61,7 +70,6 @@ export const ProjectImage = styled(Image)`
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
   height: 19rem;
-  z-index: 1;
   
   &:after {
     display: inline-block;
@@ -92,17 +100,13 @@ export const ProjectImage = styled(Image)`
 `;
 
 export const ProjectInfo = styled.section`
-  display: grid;
+  //display: inline-grid;
+  width: 100%;
+  
   background: var(--clr-white);
   padding: 1rem 2rem;
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
-
-  h3 {
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-}
 
 @media screen and (min-width: 576px) {
     opacity: 0.6;
@@ -112,27 +116,36 @@ export const ProjectInfo = styled.section`
 }
 `;
 
+export const ProjectName = styled.span`
+  margin-left: 1rem;
+  width: 100%;
+  font-weight: 500;
+  line-height: 1.7rem; 
+  font-size: 1.5rem;
+  color: black;
+`;
+
 export const ProjectNumber = styled.span`
-  display: inline-block;
   font-size: 1.25rem;
   color: var(--clr-primary-5);
-  margin-bottom: 0.75rem;
+`;
+
+export const ProjectInfoHeading = styled.div`
+  display: flex;
 `;
 
 export const ProjectLinks = styled.div`
-
-`;
-
-export const ProjectDesc = styled.div`
-  word-spacing: 15px;
-  color: var(--clr-grey-3);
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
 `;
 
 export const ProjectStack = styled.div`
-  margin-bottom: 1rem;
-
+  //grid-area: projecttags;
+  grid-column: 1 / 4;
+    grid-row: 3 / 3;
   span { /* Controlls the tags */
-    display: inline-block;
+   // display: inline-block;
     background: var(--clr-grey-9);
     color: var(--clr-grey-5);
     margin-right: 0.5rem;
@@ -160,6 +173,7 @@ export const ProjectStack = styled.div`
 `;*/
 
 export const ProjectIcon = styled.div`
+  grid-area: projectlinks;
   color: var(--clr-primary-5);
   font-size: 1.25rem;
   margin-right: 0.5rem;

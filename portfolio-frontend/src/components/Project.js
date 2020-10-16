@@ -6,10 +6,11 @@ import { ProjectItem,
   ProjectImage, 
   ProjectInfo, 
   ProjectNumber, 
-  ProjectImageCover,
-  ProjectDesc,
+  ProjectName,
   ProjectStack,
-  ProjectIcon
+  ProjectIcon,
+  ProjectLinks,
+  ProjectInfoHeading
   } from '../elements/ProjectsElements'
 
 const Project = ({ description, title, github, stack, url, image, index }) => {
@@ -20,29 +21,29 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
         <ProjectImage fluid={image.childImageSharp.fluid}/>
       )}
       <ProjectInfo>
+        <ProjectInfoHeading>
         <ProjectNumber>0{index + 1}.</ProjectNumber>
         {/* if title is not supplied, set a defualt title */}
-        <h3>{title || "Projekt"}</h3>
+        <ProjectName>{title || "Projekt"}</ProjectName>
+        </ProjectInfoHeading>
         <p>{description}</p>
         <ProjectStack>
           {stack.map(item => {
             return <span key={item.id}>{item.title}</span>
           })}
         </ProjectStack>
-        <div>
+        <ProjectLinks>
           <a href={github}>
             <ProjectIcon>
               <FaGithubSquare />
             </ProjectIcon>
-            
           </a>
           <a href={url}>
             <ProjectIcon>
               <FaShareSquare />
             </ProjectIcon>
-            
           </a>
-        </div>
+        </ProjectLinks>
       </ProjectInfo>
     </ProjectItem>
   )
