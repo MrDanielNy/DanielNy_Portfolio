@@ -8,6 +8,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+margin-left: 5%;
 
 h2 {
     color: black;
@@ -63,10 +64,13 @@ export const JobBtn = styled.button`
   }
 `;
 
-export const JobInfo = styled.div`
+export const JobInfo = styled.article`
+  
   h3 {
-  font-weight: 400;
-}
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 400;
+  }
 
 h4 {
   text-transform: uppercase;

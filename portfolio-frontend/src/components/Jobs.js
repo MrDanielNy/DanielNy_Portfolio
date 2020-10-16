@@ -47,7 +47,6 @@ const Jobs = () => {
               <JobBtn
                 key={item.strapiId}
                 onClick={() => setValue(index)}
-            /*className={`job-btn ${index === value && "active-btn"}`}*/
               >
                 {item.company}
               </JobBtn>
@@ -55,7 +54,6 @@ const Jobs = () => {
           })}
         </BtnContainer>
         {/* job info */}
-        <article>
           <JobInfo>
           <h3>{position}</h3>
           <h4>{company}</h4>
@@ -71,7 +69,6 @@ const Jobs = () => {
             )
           })}
           </JobInfo>
-        </article>
       </JobsCenter>
       <Button href="/about">
         My CV

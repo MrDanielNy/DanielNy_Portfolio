@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import Image from 'gatsby-image'
 
 export const ProjectsWrapper = styled.section` //OK
-  //width: 100vw;
   padding: 5rem 0;
   margin-top: 3rem;
   grid-area: projectsection;
@@ -56,7 +55,7 @@ export const ProjectItem = styled.article`
         grid-column: 1 / 8;
         grid-row: 1 / 1;
       }
-        //Position even projectInfos
+        //Position odd projectInfos
       &:nth-of-type(odd) section {
         grid-column: 5 / span 7;
         grid-row: 1 / 1;
@@ -141,11 +140,9 @@ export const ProjectLinks = styled.div`
 `;
 
 export const ProjectStack = styled.div`
-  //grid-area: projecttags;
   grid-column: 1 / 4;
     grid-row: 3 / 3;
   span { /* Controlls the tags */
-   // display: inline-block;
     background: var(--clr-grey-9);
     color: var(--clr-grey-5);
     margin-right: 0.5rem;
@@ -157,20 +154,11 @@ export const ProjectStack = styled.div`
 }
 `;
 
-/*export const AboutStack = styled.div`
-  span {
-    margin-top: 0.5rem;
-    display: inline-block;
-    background: var(--clr-grey-9);
-    color: var(--clr-grey-5);
-    margin-right: 0.5rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: var(--radius);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.85rem;
-  }
-`;*/
+export const ButtonCenter = styled.div`
+  width: 100%;
+  text-align: center;
+
+`;
 
 export const ProjectIcon = styled.div`
   grid-area: projectlinks;
