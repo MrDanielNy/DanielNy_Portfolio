@@ -1,5 +1,5 @@
 import React from "react"
-import logo from "../assets/logo.svg"
+import logo from "../assets/logo_vr.svg"
 import { FaAlignRight } from "react-icons/fa"
 import PageLinks from "../constants/links"
 import { Nav, 
@@ -13,7 +13,7 @@ const Navbar = ({toggleSidebar}) => {
   return (
     <Nav>
       <NavCenter>
-      <img src={logo} alt="logo" />
+      <img src={logo} alt="logo" id="logo"/>
           <NavHeader>   
             <PageLinks />
             <ToggleBtn>

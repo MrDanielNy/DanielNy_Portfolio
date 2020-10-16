@@ -20,6 +20,11 @@ export const NavCenter = styled.div`
   max-width: 1170px;
   margin: 0 auto;
 
+#logo{
+  width: 7%;
+  height: 7%;
+}
+
   @media screen and (min-width: 768px) {
     display: flex;
     grid-template-columns: auto 1fr;

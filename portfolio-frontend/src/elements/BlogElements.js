@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import Image from 'gatsby-image'
 
-export const BlogWrapper = styled.div`
-display: flex;
+export const BlogWrapper = styled.section`
+display: grid;
 grid-area: blogsection;
 
 p {
@@ -23,48 +24,49 @@ p:first-of-type {
 }
 `;
 
-/*@media screen and (min-width: 576px) {
-  .blogs-center {
+export const BlogCenter = styled.div`
+  @media screen and (min-width: 576px) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
     column-gap: 2rem;
-  }
-  .blog-img {
+  } 
+`;
+
+export const BlogImage = styled(Image)`
+  //Image is hidden on smaller screensizes
+  display: none;
+
+  @media screen and (min-width: 576px) {
     height: 17.5rem;
   }
-}
-@media screen and (min-width: 850px) {
-  .blog-img {
+  @media screen and (min-width: 850px) {
     height: 13.75rem;
   }
-}*/
-
-export const BlogCenter = styled.div`
-/*  @media screen and (min-width: 576px) {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
-    column-gap: 2rem;
-  } */
+  //Display on big screensizes
+  @media screen and (min-width: 992px) {
+    display: block;
+    grid-row: 1/1;
+    grid-column: 6/-1;
+  }
 `;
 
-export const BlogImg = styled.div`
-//  @media screen and (min-width: 850px) {
-//    height: 13.75rem;
-//  }
-`;
-
-export const BlogItem = styled.div`
-/*  display: block;
+export const BlogItem = styled.article` 
+  display: block;
   margin-bottom: 2rem;
   background: var(--clr-grey-10);
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
-  transition: var(--transition); */
+  transition: var(--transition); 
 
   &:hover {
   box-shadow: var(--dark-shadow);
   transform: scale(1.02);
   }
+`;
+
+export const BlogCard = styled.div`
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 `;
 
 /*.blog { OK
