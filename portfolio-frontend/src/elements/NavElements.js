@@ -5,7 +5,7 @@ export const Nav = styled.nav`
   top: 0;
   width: 100%;
   height: 5rem;
-  display: grid;
+  display: flex;
   align-items: center;
   z-index: 200;
   background: var(--clr-white);
@@ -49,8 +49,7 @@ export const NavLinks = styled.ul`
     @media screen and (min-width: 768px) {
         display: flex;
         justify-content: flex-end;
-        align-items: flex-end;
-        flex-direction: row;
+        
 
         li {
             margin-right: 2rem;
@@ -73,6 +72,26 @@ export const NavLinks = styled.ul`
         }
     }   
 `;
+
+/* Animations */
+
+//Sets transform outside of window and opacity to 0. Then transform to zero and opacity to one
+const fadeIn = keyframes`
+    0% {
+            transform: translateX(-200px);
+            opacity: 0;
+        }
+    100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+`
+
+//Slide elements to the right and fade in as shown above
+//(I got this solution from Mikael Sundqvist).
+const SlideRight = css`
+    animation: ${fadeIn} 0.3s ease-in-out 0.3s forwards; 
+`
 
 /* Sidebar */
 export const SidebarWrapper = styled.aside`
@@ -115,17 +134,13 @@ export const SidebarLinks = styled.ul`
       text-align: center;
       text-transform: capitalize;
       color: var(--clr-grey-5);
-      //letter-spacing: ${props => props.theme.spacing};
+      letter-spacing: var(--spacing);
       margin-bottom: 0.5rem;
-      font-size: 2rem;
+      font-size: 3rem;
       transition: var(--transition);
       border-radius: var(--radius);
+      color: black;
     }
-
-    /*li a:hover{
-      background: ${props => props.theme.color.primary9};
-      color: ${props => props.theme.color.primary5};
-    }*/
     
     li {
       ${SlideRight};
@@ -188,26 +203,6 @@ export const ToggleBtn = styled.button`
       display: none;
     }
 `;
-
-/* Animations */
-
-//Sets transform outside of window and opacity to 0. Then transform to zero and opacity to one
-const fadeIn = keyframes`
-    0% {
-            transform: translateX(-200px);
-            opacity: 0;
-        }
-    100% {
-            transform: translateX(0);
-            opacity: 1;
-        }
-`
-
-//Slide elements to the right and fade in as shown above
-//(I got this solution from Mikael Sundqvist).
-const SlideRight = css`
-    animation: ${fadeIn} 0.5s ease-in-out 0.3s forwards; 
-`
 
 /*
 .navbar { OK

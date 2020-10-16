@@ -11,7 +11,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         <FaTimes />
       </button>
       <div>
-        <Links sidebar={isOpen} />
+        <Links usingSidebar={isOpen} />
         <SocialLinks linksStyle="sidebar"/>
       </div>
     </SidebarWrapper>
