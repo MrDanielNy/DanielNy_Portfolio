@@ -1,41 +1,47 @@
 import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
+import { ContactWrapper, 
+  ContactFormWraper,
+  ContactForm,
+  ContactInput,
+  ContactTextArea,
+  ContactSubmitButton } from '../elements/pages/ContactElements'
 
 const contact = () => {
   return (
     <Layout>
       <SEO title="Contact" description="Contact page" />
-      <section className="contact-page">
-        <article className="contact-form">
+      <ContactWrapper>
+        <ContactFormWraper>
           <h3>Contact me</h3>
           <form action="https://formspree.io/f/mpzoqvja" method="POST">
-            <div className="form-group">
-              <input
+            <ContactForm>
+              <ContactInput 
                 type="text"
                 placeholder="name"
                 name="name"
                 className="form-control"
               />
-              <input
+              <ContactInput
                 type="email"
                 placeholder="email"
                 name="email"
                 className="form-control"
               />
-              <textarea
+              <ContactTextArea
                 name="message"
                 rows="5"
                 placeholder="message"
                 className="form-control"
-              ></textarea>
-            </div>
+              ></ContactTextArea>
+            </ContactForm>
             <button type="submit" className="submit-btn btn">
               Contact me
             </button>
           </form>
-        </article>
-      </section>
+        </ContactFormWraper>
+      </ContactWrapper>
     </Layout>
   )
 }
