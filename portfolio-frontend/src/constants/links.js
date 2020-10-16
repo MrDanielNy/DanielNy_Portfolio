@@ -41,9 +41,9 @@ const tempLinks = data.map(link => {
 
 export default ({ usingSidebar }) => {
   return (
-    <>
+    <div>
       {usingSidebar ? <SidebarLinks>{tempLinks}</SidebarLinks> : <NavLinks>{tempLinks}</NavLinks>}
-    </>
+    </div>
     
   )
 }

@@ -18,12 +18,14 @@ export const LayoutWrapper = styled.div`
 @media screen and (min-width: 768px) {
     display: grid;
     width: 100vw;
-    grid-template-areas:"herowrapper herowrapper"
+    grid-template-areas:
+                        "herowrapper herowrapper"
                         "services services"
                         "jobsection jobsection"
                         "projectsection projectsection"
                         "blogsection blogsection"
                         "footer footer";
     grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
 }
 `;

@@ -10,8 +10,7 @@ import GlobalStyles from '../elements/Global'
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const toggleSidebar = () => {
-    setIsOpen(!isOpen)
-    console.log({isOpen});
+    setIsOpen(!isOpen);
   }
 
   return (
