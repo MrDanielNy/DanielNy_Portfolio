@@ -53,6 +53,7 @@ export const BlogImage = styled(Image)`
 export const BlogItem = styled.article` 
   display: block;
   margin-bottom: 2rem;
+  margin-left: 1rem;
   background: var(--clr-grey-10);
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
@@ -67,6 +68,18 @@ export const BlogItem = styled.article`
 export const BlogCard = styled.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
+  
+  h4 {
+    color: black;
+    margin-top: 0.5rem;
+  }
+`;
+
+export const ButtonCenter = styled.div`
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+
 `;
 
 /*.blog { OK
